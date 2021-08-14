@@ -29,8 +29,10 @@ import org.catrobat.paintroid.contract.LayerContracts;
 import org.catrobat.paintroid.model.LayerModel;
 import org.catrobat.paintroid.tools.Workspace;
 import org.catrobat.paintroid.ui.Perspective;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
+import java.util.Objects;
 
 public class DefaultWorkspace implements Workspace {
 
@@ -151,6 +153,11 @@ public class DefaultWorkspace implements Workspace {
 	@Override
 	public PointF getSurfacePointFromCanvasPoint(PointF canvasPoint) {
 		return perspective.getSurfacePointFromCanvasPoint(canvasPoint);
+	}
+
+	@Override
+	public void setBitmapOfCurrentLayer(@Nullable Bitmap bitmapOfCurrentLayer) {
+		Objects.requireNonNull(layerModel.getCurrentLayer()).setBitmap(bitmapOfCurrentLayer);
 	}
 
 	public interface Listener {

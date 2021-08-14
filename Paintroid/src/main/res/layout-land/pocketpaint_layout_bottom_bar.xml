@@ -195,13 +195,32 @@
             android:id="@+id/pocketpaint_tools_pipette"
             tools:ignore="UseCompoundDrawables"
             style="@style/PocketPaintToolSelectionButton">
+
             <ImageView
                 style="@style/PocketPaintToolSelectionButtonImageView"
                 android:src="@drawable/ic_pocketpaint_tool_pipette"
-                android:contentDescription="@string/button_pipette"/>
+                android:contentDescription="@string/button_pipette" />
+
             <TextView
                 style="@style/PocketPaintToolSelectionButtonTextView"
-                android:text="@string/button_pipette"/>
+                android:text="@string/button_pipette" />
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pocketpaint_tools_warp"
+            style="@style/PocketPaintToolSelectionButton"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                style="@style/PocketPaintToolSelectionButtonImageView"
+                android:contentDescription="@string/button_pipette"
+                android:src="@drawable/ic_pocketpaint_tool_warp" />
+
+            <TextView
+                style="@style/PocketPaintToolSelectionButtonTextView"
+                android:text="Warp"
+                android:textColor="@color/pocketpaint_color_picker_white" />
+        </LinearLayout>
+
     </TableRow>
 </TableLayout>

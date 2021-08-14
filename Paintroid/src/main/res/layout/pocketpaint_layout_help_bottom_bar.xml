@@ -235,5 +235,22 @@
                 android:text="@string/button_pipette"
                 android:textColor="@color/pocketpaint_color_picker_white"/>
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pocketpaint_tools_warp"
+            style="@style/PocketPaintToolSelectionButton"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                style="@style/PocketPaintToolSelectionButtonImageView"
+                android:contentDescription="@string/button_pipette"
+                android:src="@drawable/ic_pocketpaint_tool_warp"
+                app:tint="@color/pocketpaint_color_picker_white" />
+
+            <TextView
+                style="@style/PocketPaintToolSelectionButtonTextView"
+                android:text="Warp"
+                android:textColor="@color/pocketpaint_color_picker_white" />
+        </LinearLayout>
     </TableRow>
 </TableLayout>

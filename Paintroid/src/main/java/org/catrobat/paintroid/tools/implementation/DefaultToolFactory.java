@@ -77,6 +77,8 @@ public class DefaultToolFactory implements ToolFactory {
 				return new HandTool(contextCallback, toolOptionsViewController, toolPaint, workspace, commandManager, DRAWTIMEINIT);
 			case SPRAY:
 				return new SprayTool(createSprayToolOptionsView(toolLayout), contextCallback, toolOptionsViewController, toolPaint, workspace, commandManager, DRAWTIMEINIT);
+			case WARP:
+				return new WarpTool(contextCallback, toolOptionsViewController, toolPaint, workspace, commandManager, DRAWTIMEINIT);
 			default:
 				return new BrushTool(createBrushToolOptionsView(toolLayout), contextCallback, toolOptionsViewController, toolPaint, workspace, commandManager, DRAWTIMEINIT);
 		}
